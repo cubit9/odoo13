@@ -6,6 +6,8 @@ services:
     #image: cubit9/odoo13:${ODOO_VERSION}
     container_name: 'odoo'
     restart: 'always'
+    depends_on:
+      - pgsql
     ports:
       - "8069:8069"
       - "8071:8071"
