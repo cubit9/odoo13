@@ -28,8 +28,8 @@ RUN set -x; \
             python3-vobject \
             python3-watchdog \
             python3-xlwt \
-            pyhton3-dev \
-            pyhton3-pycryptodome \
+            python3-dev \
+            python3-pycryptodome \
             python3-itsdangerous \
             python3-xmltodict \
             xz-utils \
