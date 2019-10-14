@@ -5,6 +5,8 @@ MAINTAINER Odoo S.A. <info@odoo.com>
 ENV LANG C.UTF-8
 
 # Install some deps, lessc and less-plugin-clean-css, and wkhtmltopdf
+# Cubit9 install 'python-dev' - required by 'pycryptodome'
+# Cubit9 install 'pycryptodome', 'itsdangerous', 'xmltodict'
 RUN set -x; \
         apt-get update \
         && apt-get install -y --no-install-recommends \
@@ -26,6 +28,10 @@ RUN set -x; \
             python3-vobject \
             python3-watchdog \
             python3-xlwt \
+            pyhton3-dev \
+            pyhton3-pycryptodome \
+            python3-itsdangerous \
+            python3-xmltodict \
             xz-utils \
         && curl -o wkhtmltox.deb -sSL https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.stretch_amd64.deb \
         && echo '7e35a63f9db14f93ec7feeb0fce76b30c08f2057 wkhtmltox.deb' | sha1sum -c - \
