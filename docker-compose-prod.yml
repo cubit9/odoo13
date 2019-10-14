@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+
+  pgsql:
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=odoo
+      - POSTGRES_PASSWORD=cubit9_secret_pw
